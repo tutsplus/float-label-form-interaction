@@ -1,0 +1,178 @@
+/* 
+ * CSS Reset
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+ * Our Custom Styles
+ * 
+ */
+
+/* General
+==================================== */
+*, *:before, *:after {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+body {
+	background: #eaedf1;
+}
+
+body, input, textarea {
+    font: 1em/1.5 Arial, Helvetica, sans-serif;
+}
+
+.container {
+	max-width: 25em;
+	margin: 2em auto;
+	width: 95%;
+	
+}
+
+.title {
+	font-size: 1.5em; 
+	padding: .5em 0;
+	text-align: center; 
+	background: #323a45;
+	color: white;
+	border-radius: 5px 5px 0 0;
+}
+
+/* Form
+==================================== */
+.form ul {
+	background: white;
+	margin-bottom: 1em;
+}
+
+.form li {
+	border: 1px solid #ccc; 
+	border-bottom: 0;
+	margin-bottom: 0px; 
+	position: relative; 
+}
+
+.form li:first-child {
+	border-top: 0;
+}
+
+.form li:last-child {
+	border-bottom: 1px solid #ccc;
+}
+
+label {
+	font-size: .8125em; /* 13/16 */ 
+	position: absolute; 
+	top: 1.23em;
+	left: 1.23em;
+	color: #f1773b;
+	opacity: 1;
+	-webkit-transition: .333s ease top, .333s ease opacity;
+	transition: .333s ease top, .333s ease opacity;
+}
+
+label, input, textarea {
+	display: block; 
+	border: 0;
+}
+
+input, textarea { 
+	width: 100%; 
+	height: 100%; 
+	padding: 2.25em 1em 1em; 
+	outline: 0;
+}
+
+textarea {
+	height: 16em;
+	resize: none; /* remove textarea resize */
+}
+
+input[type="submit"] {
+	background: #f1773b;
+	margin-bottom: 1em;
+	color: white;
+	border-radius: 3px;
+	padding: .75em;
+	-webkit-appearance: none; /* don't apply default styling */
+	-webkit-transition: .333s ease -webkit-transform;
+	transition: .333s ease transform;
+}
+input[type="submit"]:hover {
+	-webkit-transform: scale(1.025);
+	transform: scale(1.025);
+	cursor: pointer;
+}
+input[type="submit"]:active {
+	-webkit-transform: scale(.975);
+	transform: scale(.975);
+}
+
+/* Javascript classes
+   Used for modifying form fields
+==================================== */
+.js-hide-label label {
+	opacity: 0; 
+	top: 1.5em
+}
+
+.js-unhighlight-label label {
+	color: #999 
+}
+
+/* Bonus form valiation styles */
+.js-error {
+	border-color: #f13b3b !important; /* override all cases */
+}
+.js-error + li {
+	border-top-color: #f13b3b;
+}
+.js-error label {
+	color: #f13b3b;
+}

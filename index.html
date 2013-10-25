@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Contact Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+    <section class="container">
+        <h1 class="title">Contact Me</h1>
+        <form id="form" class="form" action="#" method="get">
+            <ul>
+                <li>
+                    <label for="name">Your Name:</label>
+                    <input type="text" placeholder="Your Name" id="name" name="name" tabindex="1" />
+                </li>
+                <li>
+                    <label for="email">Your Email:</label>
+                    <input type="email" placeholder="Your Email" id="email" name="email" tabindex="2" />
+                </li>
+                <li>
+                    <label for="message">Message:</label>
+                    <textarea placeholder="Message…" id="message" name="message" tabindex="3"></textarea>
+                </li>
+            </ul>
+            <input type="submit" value="Send Message" id="submit"/>
+        </form>
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
